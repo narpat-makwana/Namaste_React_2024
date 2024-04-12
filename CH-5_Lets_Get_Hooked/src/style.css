@@ -128,3 +128,27 @@
         background-color: #f0f0f0; /* Background color */
         text-align: center;
     }
+
+.filter {
+    background-color: #e1ecce;
+}
+
+.filter-btn {
+    margin: 8px;
+    padding: 5px;
+    margin-left: 25px;
+    background-color: #C6DCBA;
+    border: 1px solid;
+    border-radius: 10;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.filter-btn:hover {
+    font-weight:500; 
+}
+
+.filter-btn:active {
+    background-color: #FEFDED; 
+  }
+  

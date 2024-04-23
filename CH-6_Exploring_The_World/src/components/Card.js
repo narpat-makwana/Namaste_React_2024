@@ -1,5 +1,3 @@
-import { IMG_URL } from "../constants";
-
 
 const Card = (props) => {
   const { resData } = props;

@@ -1,4 +1,6 @@
-import {IMG_URL} from '../constants/'
+// import { IMG_URL } from "../constants";
+
+
 const Card = (props) => {
   const { resData } = props;
   const { name, cloudinaryImageId, cuisines, areaName, avgRating,costForTwo,slaString,locality } = resData;

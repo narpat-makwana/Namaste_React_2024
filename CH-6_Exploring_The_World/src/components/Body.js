@@ -1,9 +1,8 @@
-import Search from "./Search";
 import Card from "./Card";
 import React, { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import {Link } from "react-router-dom";
-
+import WhatsOnMind from "./WhatsOnMind";
 
 const Body = () => {
 
@@ -18,7 +17,7 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.61610&lng=73.72860&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
     const json = await data.json();
-    // console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+    // console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);  
 
     setRestList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setFilteredRestList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -73,11 +72,16 @@ const Body = () => {
         <button className="filter-btn" onClick={handleFilter}>Top Rated Restaurants</button>
 
       </div>
+      <div>
+          <WhatsOnMind/>
+
+      </div>
+
 
       <div className="body">
         {
           filteredRestList.map((restaurant) => {
-           return <Link key={restaurant?.info?.id} to={"/restaurants/"+ restaurant?.info?.id}> <Card resData={restaurant?.info} /> </Link>
+           return <Link key={restaurant?.info?.id} to={"/restaurants/"+ restaurant?.info?.id} style={{ textDecoration: 'none', color: 'black' }}> <Card resData={restaurant?.info} /> </Link>
           })
 
         }

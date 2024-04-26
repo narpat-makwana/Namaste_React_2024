@@ -89,6 +89,7 @@
         white-space: pre-wrap;
         word-wrap: break-word;
         font-size: 15px;
+        margin-left: 65px;
     }
 
     .cardImg {
@@ -173,4 +174,22 @@
         border-radius: 10;
         margin: 20px;
         padding: 8px;
+    }
+
+    .dishes {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .dishes img {
+        height: 200px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 10px;
+    }
+
+    .dish-title {
+        font-size: x-large;
+        margin: 30px;
+
     }
